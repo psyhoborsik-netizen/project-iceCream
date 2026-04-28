@@ -1,15 +1,11 @@
-@import "./utils/variables";
-@import "./utils/mixins";
-@import "./components/how-made";
-@import "./components/reviews";
-@import "./components/header";
-@import "./components/headerHero";
-@import "./components/hero";
-@import "../sass/components/mixins";
+@import "../utils/variables";
+@import "../utils/mixins";
+@import "../components/how-made";
+@import "../components/reviews";
 @import "../sass/components/header";
 @import "../sass/components/headerHero";
 @import "../sass/components/hero";
-
+@import "../sass/components/location";
 
 body {
     margin: 0;

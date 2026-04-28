@@ -1,0 +1,162 @@
+.locations {
+    padding: 40px 0;
+    background-color: #84a178;
+    font-family: "Montserrat";
+
+    .container {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.cardsgrid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+.locationcard {
+    width: 280px;
+    height: 430px;
+    background: #fcfcfc;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    padding: 40px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    .label {
+        width: 100px;
+        height: 36px;
+        background: #f8d24e;
+        border-radius: 4px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 1.2;
+        letter-spacing: 0.04em;
+        color: #131313;
+        margin-bottom: 20px;
+    }
+
+    .city {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.86;
+        letter-spacing: 0.04em;
+        color: #131313;
+        margin-bottom: 8px;
+    }
+
+    .address {
+        display: block;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.83;
+        letter-spacing: 0.04em;
+        color: #d6936d;
+
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #e1e1e1;
+        position: relative;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .schedule {
+        p {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1.86;
+            color: #131313;
+            margin-bottom: 10px;
+
+            span {
+                color: #ababab;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        padding-bottom: 24px;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    .cardcontacts,
+    .card-contacts {
+        margin: 15px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #131313;
+        }
+    }
+}
+
+.locationbuttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+    button {
+        font-family: "Montserrat";
+        width: 160px;
+        height: 45px;
+        border-radius: 15px;
+        font-weight: 700;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttonyellow {
+        background: #f8d24e;
+        color: #131313;
+    }
+
+    .buttonoutline {
+        background: transparent;
+        border: 2px solid #f8d24e;
+        color: #131313;
+    }
+}
+
+@media (min-width: 768px) {
+    .cardsgrid {
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .locationbuttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+}
