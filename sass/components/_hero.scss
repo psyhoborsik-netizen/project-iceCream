@@ -207,4 +207,30 @@
     .hero__container > h2 > span {
         @include font-H2SpanHero;
     }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        height: 836px;
+
+        .hero__art-IceCream,
+        .hero__art-IceCoffee,
+        .hero__art-Milkshakes {
+            max-width: 224px;
+            min-width: 224px;
+            height: 420px;
+        }
+
+        .hero__circle-IceCream,
+        .hero__circle-IceCoffee,
+        .hero__circle-Milkshakes {
+            left: 4%;
+        }
+
+        .hero__container {
+            height: 836px;
+        }
+
+        .hero__container > div {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 }

@@ -27,6 +27,10 @@
         display: none;
     }
 
+    .hero__rainbow {
+        display: none;
+    }
+
     .hero__img-container > img {
         max-width: 207px;
         height: 237px;
@@ -81,7 +85,7 @@
         color: #f8d24e;
     }
 
-    @media (min-width: 425px) {
+    @media (min-width: 425px) and (max-width: 767px) {
         .hero__img-container {
             justify-content: end;
             background-size: 245px 50px;
@@ -95,6 +99,232 @@
 
         .hero__info {
             margin-top: 10px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        background-image: url(/src/images/HeaderBackYellowLineForTablet.png);
+        background-repeat: no-repeat;
+        background-size: 100% 20%;
+        background-position: bottom;
+        height: 335px;
+
+        .header__hero-cont {
+            height: 335px;
+        }
+
+        .hero__rainbow {
+            @include flex-center;
+            gap: 20px;
+            max-width: 350px;
+            margin-top: 20px;
+        }
+
+        .hero__rainbow > img {
+            max-width: 132px;
+            height: 132px;
+        }
+
+        .hero__rainbow > div {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+        }
+
+        .hero__rainbow > div > p {
+            @include font-PHeaderHero;
+            max-width: 165px;
+            color: #ffffff;
+        }
+
+        .hero__rainbow > div > img {
+            color: #ffffff;
+        }
+
+        .hero__img-container {
+            justify-content: end;
+            background-size: 245px 50px;
+            background-position: bottom right;
+            margin-bottom: 150px;
+        }
+
+        .hero__img-container > img {
+            margin-left: 0;
+        }
+
+        .hero__info {
+            margin-top: 10px;
+        }
+
+        .hero__img-container > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            heigth: 100%;
+        }
+
+        .hero__trucks,
+        .hero__cafes {
+            text-align: center;
+        }
+
+        .hero__img-container {
+            height: 358px;
+            max-width: 50%;
+            margin: 0;
+            align-items: end;
+            background-image: none;
+            background-repeat: none;
+            background-size: none;
+            background-position: none;
+            gap: 20px;
+        }
+
+        .hero__img-container > div {
+            height: 100%;
+        }
+
+        .header__hero-cont {
+            flex-direction: row;
+        }
+
+        .hero__info {
+            max-width: 50%;
+        }
+
+        .hero__trucks > h3,
+        .hero__cafes > h3 {
+            @include font-H3HeaderHero;
+            text-align: center;
+            margin: 12px 0px;
+        }
+
+        .hero__trucks > p,
+        .hero__cafes > p {
+            @include font-PSmallHeaderHero;
+            text-align: center;
+            color: #fcfcfc;
+        }
+
+        .hero__img-container > img {
+            min-width: 268px;
+            height: 329px;
+            margin-bottom: -9px;
+        }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1440px) {
+        background-image: url(/src/images/HeaderBackYellowLineForTablet.png);
+        background-repeat: no-repeat;
+        background-size: 100% 20%;
+        background-position: bottom;
+        height: 335px;
+
+        .header__hero-cont {
+            height: 335px;
+        }
+
+        .hero__rainbow {
+            @include flex-center;
+            gap: 20px;
+            max-width: 350px;
+            margin-top: 20px;
+        }
+
+        .hero__rainbow > img {
+            max-width: 132px;
+            height: 132px;
+        }
+
+        .hero__rainbow > div {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+        }
+
+        .hero__rainbow > div > p {
+            @include font-PHeaderHero;
+            max-width: 165px;
+            color: #ffffff;
+        }
+
+        .hero__rainbow > div > img {
+            color: #ffffff;
+        }
+
+        .hero__img-container {
+            justify-content: end;
+            background-size: 245px 50px;
+            background-position: bottom right;
+            margin-bottom: 150px;
+        }
+
+        .hero__img-container > img {
+            margin-left: 0;
+        }
+
+        .hero__info {
+            margin-top: 10px;
+        }
+
+        .hero__img-container > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            heigth: 100%;
+        }
+
+        .hero__trucks,
+        .hero__cafes {
+            text-align: center;
+        }
+
+        .hero__img-container {
+            height: 358px;
+            max-width: 50%;
+            margin: 0;
+            align-items: end;
+            background-image: none;
+            background-repeat: none;
+            background-size: none;
+            background-position: none;
+            gap: 20px;
+        }
+
+        .hero__img-container > div {
+            height: 100%;
+        }
+
+        .header__hero-cont {
+            flex-direction: row;
+        }
+
+        .hero__info {
+            max-width: 50%;
+        }
+
+        .hero__trucks > h3,
+        .hero__cafes > h3 {
+            @include font-H3HeaderHero;
+            text-align: center;
+            margin: 12px 0px;
+        }
+
+        .hero__trucks > p,
+        .hero__cafes > p {
+            @include font-PSmallHeaderHero;
+            text-align: center;
+            color: #fcfcfc;
+        }
+
+        .hero__img-container > img {
+            min-width: 268px;
+            height: 329px;
+            margin-bottom: -9px;
         }
     }
 }

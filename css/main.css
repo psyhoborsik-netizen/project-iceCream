@@ -1,11 +1,5 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .how-made {
-  background-color: #84A178;
+  background-color: #84a178;
   overflow: visible;
   position: relative;
   z-index: 1;
@@ -25,7 +19,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
-  color: #FCFCFC;
+  color: #fcfcfc;
   letter-spacing: 0;
   text-align: center;
   text-transform: uppercase;
@@ -40,7 +34,7 @@ body {
   letter-spacing: 0.04em;
   text-align: center;
   text-transform: uppercase;
-  color: #FCFCFC;
+  color: #fcfcfc;
   margin: 0 0 32px;
   width: 200px;
 }
@@ -65,8 +59,7 @@ body {
   width: 278px;
   height: 278px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 .how-made__content {
@@ -80,7 +73,7 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 176%;
-  color: #FCFCFC;
+  color: #fcfcfc;
   letter-spacing: 0.04em;
   text-align: center;
   margin: 0 0 12px;
@@ -95,7 +88,7 @@ body {
   width: 164px;
   height: 42px;
   border-radius: 10px;
-  background-color: #F8D24E;
+  background-color: #f8d24e;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 14px;
@@ -132,8 +125,7 @@ body {
 .how-made__stat-icon img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   display: block;
 }
 .how-made__stat-number {
@@ -141,7 +133,7 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 100%;
-  color: #FCFCFC;
+  color: #fcfcfc;
   letter-spacing: 0.04em;
   text-align: center;
   text-transform: uppercase;
@@ -153,7 +145,7 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 170%;
-  color: #FCFCFC;
+  color: #fcfcfc;
   letter-spacing: 0;
   text-align: center;
   margin: 0;
@@ -181,9 +173,9 @@ body {
   position: relative;
   z-index: 1;
   width: 340px;
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
   border-radius: 10px;
-  border: 2px solid #F8D24E;
+  border: 2px solid #f8d24e;
   padding: 32px 20px;
   box-sizing: border-box;
   display: flex;
@@ -235,7 +227,7 @@ body {
   height: 56px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid #FCFCFC;
+  border: 2px solid #fcfcfc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -286,8 +278,7 @@ body {
   width: 280px;
   height: 130px;
   border-radius: 8px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 .reviews__slider {
@@ -307,19 +298,18 @@ body {
 .reviews__author-avatar img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 .reviews__author-avatar {
   margin-bottom: 32px;
-  border: 3px solid #FCFCFC;
+  border: 3px solid #fcfcfc;
 }
 .reviews__card {
   width: 280px;
   min-height: 256px;
   border-radius: 10px;
-  background-color: #84A178;
+  background-color: #84a178;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -332,7 +322,7 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 255%;
-  color: #FCFCFC;
+  color: #fcfcfc;
   letter-spacing: 0;
   text-align: center;
   margin: 0;
@@ -360,15 +350,16 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 0;
 }
 .reviews__dot--active {
-  background-color: #84A178;
+  background-color: #84a178;
 }
+
 header {
   width: 100%;
   height: 502px;
@@ -405,9 +396,6 @@ header .buy__btn {
 header .header__container > nav {
   display: none;
 }
-header .hero__rainbow {
-  display: none;
-}
 @media (min-width: 425px) {
   header {
     height: 415px;
@@ -440,6 +428,9 @@ header .hero__rainbow {
   background-position: bottom;
 }
 .header__hero .hero__img-container > div {
+  display: none;
+}
+.header__hero .hero__rainbow {
   display: none;
 }
 .header__hero .hero__img-container > img {
@@ -512,7 +503,7 @@ header .hero__rainbow {
   vertical-align: middle;
   color: #f8d24e;
 }
-@media (min-width: 425px) {
+@media (min-width: 425px) and (max-width: 767px) {
   .header__hero .hero__img-container {
     justify-content: end;
     background-size: 245px 50px;
@@ -524,6 +515,232 @@ header .hero__rainbow {
   }
   .header__hero .hero__info {
     margin-top: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header__hero {
+    background-image: url(/src/images/HeaderBackYellowLineForTablet.png);
+    background-repeat: no-repeat;
+    background-size: 100% 20%;
+    background-position: bottom;
+    height: 335px;
+  }
+  .header__hero .header__hero-cont {
+    height: 335px;
+  }
+  .header__hero .hero__rainbow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 350px;
+    margin-top: 20px;
+  }
+  .header__hero .hero__rainbow > img {
+    max-width: 132px;
+    height: 132px;
+  }
+  .header__hero .hero__rainbow > div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .header__hero .hero__rainbow > div > p {
+    font-family: DM Sans;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    max-width: 165px;
+    color: #ffffff;
+  }
+  .header__hero .hero__rainbow > div > img {
+    color: #ffffff;
+  }
+  .header__hero .hero__img-container {
+    justify-content: end;
+    background-size: 245px 50px;
+    background-position: bottom right;
+    margin-bottom: 150px;
+  }
+  .header__hero .hero__img-container > img {
+    margin-left: 0;
+  }
+  .header__hero .hero__info {
+    margin-top: 10px;
+  }
+  .header__hero .hero__img-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    heigth: 100%;
+  }
+  .header__hero .hero__trucks,
+  .header__hero .hero__cafes {
+    text-align: center;
+  }
+  .header__hero .hero__img-container {
+    height: 358px;
+    max-width: 50%;
+    margin: 0;
+    align-items: end;
+    background-image: none;
+    background-repeat: none;
+    background-size: none;
+    background-position: none;
+    gap: 20px;
+  }
+  .header__hero .hero__img-container > div {
+    height: 100%;
+  }
+  .header__hero .header__hero-cont {
+    flex-direction: row;
+  }
+  .header__hero .hero__info {
+    max-width: 50%;
+  }
+  .header__hero .hero__trucks > h3,
+  .header__hero .hero__cafes > h3 {
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    text-align: right;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 12px 0px;
+  }
+  .header__hero .hero__trucks > p,
+  .header__hero .hero__cafes > p {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    text-align: center;
+    color: #fcfcfc;
+  }
+  .header__hero .hero__img-container > img {
+    min-width: 268px;
+    height: 329px;
+    margin-bottom: -9px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .header__hero {
+    background-image: url(/src/images/HeaderBackYellowLineForTablet.png);
+    background-repeat: no-repeat;
+    background-size: 100% 20%;
+    background-position: bottom;
+    height: 335px;
+  }
+  .header__hero .header__hero-cont {
+    height: 335px;
+  }
+  .header__hero .hero__rainbow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 350px;
+    margin-top: 20px;
+  }
+  .header__hero .hero__rainbow > img {
+    max-width: 132px;
+    height: 132px;
+  }
+  .header__hero .hero__rainbow > div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .header__hero .hero__rainbow > div > p {
+    font-family: DM Sans;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    max-width: 165px;
+    color: #ffffff;
+  }
+  .header__hero .hero__rainbow > div > img {
+    color: #ffffff;
+  }
+  .header__hero .hero__img-container {
+    justify-content: end;
+    background-size: 245px 50px;
+    background-position: bottom right;
+    margin-bottom: 150px;
+  }
+  .header__hero .hero__img-container > img {
+    margin-left: 0;
+  }
+  .header__hero .hero__info {
+    margin-top: 10px;
+  }
+  .header__hero .hero__img-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    heigth: 100%;
+  }
+  .header__hero .hero__trucks,
+  .header__hero .hero__cafes {
+    text-align: center;
+  }
+  .header__hero .hero__img-container {
+    height: 358px;
+    max-width: 50%;
+    margin: 0;
+    align-items: end;
+    background-image: none;
+    background-repeat: none;
+    background-size: none;
+    background-position: none;
+    gap: 20px;
+  }
+  .header__hero .hero__img-container > div {
+    height: 100%;
+  }
+  .header__hero .header__hero-cont {
+    flex-direction: row;
+  }
+  .header__hero .hero__info {
+    max-width: 50%;
+  }
+  .header__hero .hero__trucks > h3,
+  .header__hero .hero__cafes > h3 {
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    text-align: right;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 12px 0px;
+  }
+  .header__hero .hero__trucks > p,
+  .header__hero .hero__cafes > p {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    text-align: center;
+    color: #fcfcfc;
+  }
+  .header__hero .hero__img-container > img {
+    min-width: 268px;
+    height: 329px;
+    margin-bottom: -9px;
   }
 }
 
@@ -764,10 +981,179 @@ header .hero__rainbow {
   text-align: center;
   text-transform: uppercase;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    height: 836px;
+  }
+  .hero .hero__art-IceCream,
+  .hero .hero__art-IceCoffee,
+  .hero .hero__art-Milkshakes {
+    max-width: 224px;
+    min-width: 224px;
+    height: 420px;
+  }
+  .hero .hero__circle-IceCream,
+  .hero .hero__circle-IceCoffee,
+  .hero .hero__circle-Milkshakes {
+    left: 4%;
+  }
+  .hero .hero__container {
+    height: 836px;
+  }
+  .hero .hero__container > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
+.locations {
+  padding: 40px 0;
+  background-color: #84a178;
+  font-family: "Montserrat";
+}
+.locations .container {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardsgrid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+.locationcard {
+  width: 280px;
+  height: 430px;
+  background: #fcfcfc;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  padding: 40px 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.locationcard .label {
+  width: 100px;
+  height: 36px;
+  background: #f8d24e;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #131313;
+  margin-bottom: 20px;
+}
+.locationcard .city {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  color: #131313;
+  margin-bottom: 8px;
+}
+.locationcard .address {
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: 0.04em;
+  color: #d6936d;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+.locationcard .address:hover {
+  text-decoration: underline;
+}
+.locationcard .schedule p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: #131313;
+  margin-bottom: 10px;
+}
+.locationcard .schedule p span {
+  color: #ababab;
+}
+.locationcard .schedule p:last-child {
+  margin-bottom: 0;
+}
+.locationcard .schedule {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.locationcard .cardcontacts,
+.locationcard .card-contacts {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.locationcard .cardcontacts a,
+.locationcard .card-contacts a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #131313;
+}
+
+.locationbuttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.locationbuttons button {
+  font-family: "Montserrat";
+  width: 160px;
+  height: 45px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.locationbuttons .buttonyellow {
+  background: #f8d24e;
+  color: #131313;
+}
+.locationbuttons .buttonoutline {
+  background: transparent;
+  border: 2px solid #f8d24e;
+  color: #131313;
+}
+
+@media (min-width: 768px) {
+  .cardsgrid {
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+  }
+  .locationbuttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/*# sourceMappingURL=main.css.map */
