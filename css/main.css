@@ -43,6 +43,9 @@
   width: 278px;
   height: 278px;
   margin: 0 auto 32px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50%;
 }
 .how-made__img-wrap::before {
   content: "";
@@ -59,8 +62,13 @@
   width: 278px;
   height: 278px;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
+}
+.how-made__img:hover {
+  transform: scale(1.05);
 }
 .how-made__content {
   display: flex;
@@ -100,6 +108,11 @@
   cursor: pointer;
   border: none;
   outline: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.how-made__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 .how-made__stats {
   display: flex;
@@ -125,7 +138,8 @@
 .how-made__stat-icon img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
 }
 .how-made__stat-number {
@@ -150,6 +164,99 @@
   text-align: center;
   margin: 0;
   max-width: 200px;
+}
+@media (min-width: 768px) {
+  .how-made__container {
+    max-width: 100%;
+    padding: 60px 48px 80px;
+  }
+  .how-made__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .how-made__subtitle {
+    width: 100%;
+    text-align: center;
+  }
+  .how-made__title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .how-made__body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+  }
+  .how-made__img-wrap {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+  }
+  .how-made__img {
+    width: 300px;
+    height: 300px;
+    margin-top: 18px;
+  }
+  .how-made__content {
+    align-items: flex-start;
+    flex: 1;
+  }
+  .how-made__text {
+    text-align: left;
+  }
+  .how-made__btn {
+    align-self: flex-start;
+  }
+  .how-made__stats {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 64px;
+    gap: 24px;
+  }
+  .how-made__stat {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  .how-made__stat-desc {
+    max-width: 200px;
+  }
+}
+@media (min-width: 1280px) {
+  .how-made__container {
+    max-width: 1280px;
+    padding: 80px 120px 100px;
+  }
+  .how-made__body {
+    gap: 80px;
+  }
+  .how-made__img-wrap {
+    width: 360px;
+    height: 360px;
+  }
+  .how-made__img {
+    width: 360px;
+    height: 360px;
+  }
+  .how-made__subtitle {
+    font-size: 20px;
+  }
+  .how-made__title {
+    font-size: 48px;
+  }
+  .how-made__text {
+    font-size: 14px;
+  }
+  .how-made__stat-number {
+    font-size: 48px;
+  }
+  .how-made__stat-desc {
+    max-width: 220px;
+  }
 }
 
 .modal {
@@ -184,6 +291,12 @@
   max-height: 90vh;
   overflow-y: auto;
 }
+@media (min-width: 768px) {
+  .modal__window {
+    width: 560px;
+    padding: 40px;
+  }
+}
 .modal__close {
   position: absolute;
   top: 16px;
@@ -200,6 +313,10 @@
   justify-content: center;
   padding: 0;
   outline: none;
+  transition: transform 0.25s ease;
+}
+.modal__close:hover {
+  transform: rotate(90deg);
 }
 .modal__title {
   font-family: "Montserrat", sans-serif;
@@ -233,6 +350,11 @@
   justify-content: center;
   cursor: pointer;
   outline: none;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+.modal__play:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.35);
 }
 .modal__text {
   font-family: "Montserrat", sans-serif;
@@ -273,13 +395,20 @@
   position: relative;
   transform: translateY(-30px);
   z-index: 3;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .reviews__gallery-img {
   width: 280px;
   height: 130px;
   border-radius: 8px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
+}
+.reviews__gallery-img:hover {
+  transform: scale(1.05);
 }
 .reviews__slider {
   display: flex;
@@ -298,7 +427,8 @@
 .reviews__author-avatar img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 .reviews__author-avatar {
@@ -316,6 +446,11 @@
   padding: 52px 24px 32px;
   box-sizing: border-box;
   margin-bottom: 32px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.reviews__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
 }
 .reviews__text {
   font-family: "Montserrat", sans-serif;
@@ -355,9 +490,81 @@
   outline: none;
   cursor: pointer;
   padding: 0;
+  transition: background-color 0.25s ease;
 }
 .reviews__dot--active {
   background-color: #84a178;
+}
+@media (min-width: 768px) {
+  .reviews__container {
+    max-width: 100%;
+    padding: 0 48px 80px;
+  }
+  .reviews__gallery {
+    width: 100%;
+    transform: translateY(-40px);
+  }
+  .reviews__gallery-img {
+    width: 100%;
+    height: 260px;
+  }
+  .reviews__slider {
+    width: 100%;
+    margin-top: 60px;
+  }
+  .reviews__author-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .reviews__author-avatar img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+  }
+  .reviews__author-avatar {
+    margin-bottom: 40px;
+  }
+  .reviews__card {
+    width: 100%;
+    min-height: 220px;
+    padding: 40px 60px;
+  }
+  .reviews__text {
+    font-size: 14px;
+    line-height: 200%;
+  }
+  .reviews__author-name {
+    font-size: 22px;
+    width: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .reviews__container {
+    max-width: 1280px;
+    padding: 0 120px 100px;
+  }
+  .reviews__gallery {
+    transform: translateY(-50px);
+  }
+  .reviews__gallery-img {
+    height: 360px;
+  }
+  .reviews__slider {
+    margin-top: 40px;
+  }
+  .reviews__card {
+    padding: 48px 120px;
+  }
+  .reviews__text {
+    font-size: 16px;
+  }
+  .reviews__author-name {
+    font-size: 24px;
+  }
 }
 
 header {
@@ -1154,6 +1361,4 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
