@@ -304,79 +304,111 @@
     </div>
 
     <section class="locations">
-      <div class="container">
-        <div class="cards__grid">
-          <article class="location__card">
-            <span class="label">CAFE</span>
-            <h3 class="city">Chicago</h3>
-            <p class="address">10340 Ridgeland Ave, Chicago Ridge, IL 60415, USA</p>
-            <div class="schedule">
-              <p>Monday - Friday <br /><span>06:00 AM - 10:00 PM</span></p>
-              <p>Saturday - Sunday <br /><span>08:00 AM - 16:00 PM</span></p>
-            </div>
-            <div class="card__contacts">
-              <a href="tel:+610383766284">+61(0) 383 766 284</a>
-              <a href="mailto:noreply@envato.com">noreply@envato.com</a>
-            </div>
-          </article>
+        <div class="container">
+          <div class="cards__grid">
+            <article class="location__card">
+              <span class="label">CAFE</span>
+              <h3 class="city">Chicago</h3>
+              <p class="address">10340 Ridgeland Ave, Chicago Ridge, IL 60415, USA</p>
+              <div class="schedule">
+                <p>Monday - Friday <br /><span>06:00 AM - 10:00 PM</span></p>
+                <p>Saturday - Sunday <br /><span>08:00 AM - 16:00 PM</span></p>
+              </div>
+              <div class="card__contacts">
+                <a href="tel:+610383766284">+61(0) 383 766 284</a>
+                <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+              </div>
+            </article>
 
-          <article class="location__card">
-            <span class="label yellow">FOOD TRUCK</span>
-            <h3 class="city">Los Angeles</h3>
-            <p class="address">1003 Manhattan Ave, Manhattan Beach, CA 90263, USA</p>
-            <div class="schedule">
-              <p>Monday - Friday <br /><span>06:00 AM - 10:00 PM</span></p>
-              <p>Saturday - Sunday <br /><span>08:00 AM - 16:00 PM</span></p>
-            </div>
-            <div class="card__contacts">
-              <a href="tel:+610383766284">+61(0) 383 766 284</a>
-              <a href="mailto:noreply@envato.com">noreply@envato.com</a>
-            </div>
-          </article>
+            <article class="location__card">
+              <span class="label yellow">FOODTRUCK</span>
+              <h3 class="city">Los Angeles</h3>
+              <p class="address">1003 Manhattan Ave, Manhattan Beach, CA 90263, USA</p>
+              <div class="schedule">
+                <p>Monday - Friday <br /><span>06:00 AM - 10:00 PM</span></p>
+                <p>Saturday - Sunday <br /><span>08:00 AM - 16:00 PM</span></p>
+              </div>
+              <div class="card__contacts">
+                <a href="tel:+610383766284">+61(0) 383 766 284</a>
+                <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+              </div>
+            </article>
 
-          <article class="location__card">
-            <span class="label">CAFE</span>
-            <h3 class="city">New York</h3>
-            <p class="address">726 Sterling Pl, Brooklyn, NY 11222, USA</p>
-            <div class="schedule">
-              <p>Monday - Friday <br /><span>06:00 AM - 10:00 PM</span></p>
-              <p>Saturday - Sunday <br /><span>08:00 AM - 16:00 PM</span></p>
-            </div>
-            <div class="card__contacts">
-              <a href="tel:+610383766284">+61(0) 383 766 284</a>
-              <a href="mailto:noreply@envato.com">noreply@envato.com</a>
-            </div>
-          </article>
-        </div>
+            <article class="location__card">
+              <span class="label">CAFE</span>
+              <h3 class="city">New York</h3>
+              <p class="address">726 Sterling Pl, Brooklyn, NY 11222, USA</p>
+              <div class="schedule">
+                <p>Monday - Friday <br /><span>06:00 AM - 10:00 PM</span></p>
+                <p>Saturday - Sunday <br /><span>08:00 AM - 16:00 PM</span></p>
+              </div>
+              <div class="card__contacts">
+                <a href="tel:+610383766284">+61(0) 383 766 284</a>
+                <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+              </div>
+            </article>
+          </div>
 
-        <div class="location__buttons">
-          <button class="button__yellow" data-modal-open="locations-modal">Our Locations ></button>
-          <button class="button__outline" data-modal-open="franchise-modal">Franchise ></button>
-        </div>
+          <div class="location__buttons">
+            <button class="button__yellow" data-modal-open="locations-modal" >Our Locations ></button>
+            <button class="button__outline" data-modal-open="franchise-modal">Franchise ></button>
+          </div>
+
+    <div id="locations-modal" data-modal class="backdrop is-hidden">
+        <div class="modal modal--locations">
+        <button class="modal__close" data-modal-close>&times;</button>
+        <h2 class="modal__title">Our Locations</h2>
+      <div class="modal__map">
+        <img src="/src/images/locationMap.webp" class="poltava-map" alt="Poltava map">
       </div>
-    </section>
+    <button class="button__yellow modal__btn">Open map</button>
+      </div>
+    </div>
+
+    <div id="franchise-modal" data-modal class="backdrop is-hidden">
+      <div class="modal modal-franchise">
+        <button class="modal__close" data-modal-close>&times;</button>
+        <h2 class="modal__title">Thank you for your interest in owning an Ice Cream shop</h2>
+        <p class="modal__text">Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once the application process resumes, we will contact you for further information. Please fill out the contact information below and we will reach out for additional information. We appreciate your patience.</p>
+        <form class="modal__form">
+        <input type="text" placeholder="Name">
+        <input type="tel" placeholder="Phone">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Comment"></textarea>
+        <button type="submit" class="button__yellow">Submit</button>
+       </form>
+      </div>
+    </div>
+        </div>
+      </section>
 
     <section class="contacts__section">
-      <div class="container">
-        <div class="contacts__flex">
-          <h2 class="contacts__title">
-            HOMEMADE ICE CREAM MADE
-            <span class="contacts__accent">WITH PASSION</span>
-          </h2>
-          <div class="contacts__channels">
-            <div class="social__box">
-              <a href="#" class="social__item">Github</a>
-              <a href="#" class="social__item">Telegram</a>
-              <a href="#" class="social__item">Facebook</a>
+        <div class="container">
+          <div class="contacts__flex">
+            <h2 class="contacts__title">
+              HOMEMADE ICE CREAM MADE
+              <span class="contacts__accent">WITH PASSION</span>
+            </h2>
+            <div class="contacts__channels">
+              <div class="social__box">
+              <a href="#" class="social__item">
+              <img src="src/brand/github.svg" alt="Github" class="social__icon">
+              </a>
+              <a href="#" class="social__item">
+              <img src="src/brand/telegram.svg" alt="Telegram" class="social__icon">
+              </a>
+              <a href="#" class="social__item">
+              <img src="src/brand/facebook.svg" alt="Facebook" class="social__icon">
+              </a>
             </div>
-            <p class="phone__display">
-              Feel free to contact <strong>+61 (0) 383 766 284</strong>
-            </p>
+              <p class="phone__display">
+                <span class="phone__text">Feel free to contact</span>
+                <a href="tel:+610383766284" class="phone__link">+61 (0) 383 766 284</a>
+              </p>
           </div>
         </div>
-      </div>
-    </section>
-    </main>
+        </div>
+      </section>
 
     <footer class="footer__rights">
       <div class="container">
@@ -385,35 +417,6 @@
         </p>
       </div>
     </footer>
-  </div>
-
-  <div id="locations-modal" data-modal class="backdrop is-hidden">
-    <div class="modal modal--locations">
-      <button class="modal__close" data-modal-close>&times;</button>
-      <h2 class="modal__title">Our Locations</h2>
-      <div class="modal__map">
-        <img src="/src/images/locationMap.webp" class="poltava-map" alt="Poltava map">
-      </div>
-      <button class="button__yellow modal__btn">Open map</button>
-    </div>
-  </div>
-
-  <div id="franchise-modal" data-modal class="backdrop is-hidden">
-    <div class="modal modal-franchise">
-      <button class="modal__close" data-modal-close>&times;</button>
-      <h2 class="modal__title">Thank you for your interest in owning an Ice Cream shop</h2>
-      <p class="modal__text">Due to the overwhelming volume of franchise requests we are not accepting new franchisee
-        applications at this time. Once the application process resumes, we will contact you for further information.
-        Please fill out the contact information below and we will reach out for additional information. We appreciate
-        your patience.</p>
-      <form class="modal__form">
-        <input type="text" placeholder="Name">
-        <input type="tel" placeholder="Phone">
-        <input type="email" placeholder="Email">
-        <textarea placeholder="Comment"></textarea>
-        <button type="submit" class="button__yellow">Submit</button>
-      </form>
-    </div>
   </div>
 
   <div class="backdrop is-hidden" data-modal-buyNow>
