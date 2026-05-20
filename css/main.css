@@ -1,7 +1,6 @@
 @charset "UTF-8";
 .how-made {
   background-color: #84a178;
-  overflow: visible;
   position: relative;
   z-index: 1;
 }
@@ -264,111 +263,114 @@
   }
 }
 
-.modal {
+.how-made-modal {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.modal.is-hidden {
+.how-made-modal.is-hidden {
   display: none;
 }
-.modal__overlay {
+.how-made-modal__overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
-.modal__window {
+.how-made-modal__window {
   position: relative;
   z-index: 1;
-  width: 340px;
-  background-color: #fcfcfc;
-  border-radius: 10px;
+  width: 220px;
+  background-color: #f5f5f5;
   border: 2px solid #f8d24e;
-  padding: 32px 20px;
+  border-radius: 18px;
+  padding: 20px 14px 24px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-height: 90vh;
-  overflow-y: auto;
 }
 @media (min-width: 768px) {
-  .modal__window {
-    width: 560px;
-    padding: 40px;
+  .how-made-modal__window {
+    width: 360px;
+    padding: 24px 28px 28px;
   }
 }
-.modal__close {
+.how-made-modal__close {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 28px;
-  height: 28px;
-  background: none;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
+  background: transparent;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   color: #131313;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  outline: none;
-  transition: transform 0.25s ease;
+  transition: transform 250ms ease;
 }
-.modal__close:hover {
-  transform: rotate(90deg);
+.how-made-modal__close:hover {
+  transform: rotate(90deg) scale(1.1);
 }
-.modal__title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 100%;
-  color: #131313;
-  margin: 0 0 24px;
-  width: 100%;
+.how-made-modal__title {
+  margin: 0 0 18px;
   text-align: center;
+  font-family: "Seymour One", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #131313;
 }
-.modal__video {
+@media (min-width: 768px) {
+  .how-made-modal__title {
+    font-size: 22px;
+  }
+}
+.how-made-modal__video {
   width: 100%;
-  height: 228px;
-  background-color: #131313;
-  border-radius: 8px;
+  height: 140px;
+  border-radius: 14px;
+  background-color: #111;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
-  flex-shrink: 0;
+  margin-bottom: 18px;
 }
-.modal__play {
-  width: 56px;
-  height: 56px;
+@media (min-width: 768px) {
+  .how-made-modal__video {
+    height: 220px;
+  }
+}
+.how-made-modal__play {
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid #fcfcfc;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  outline: none;
-  transition: transform 0.25s ease, background-color 0.25s ease;
+  transition: transform 250ms ease, background-color 250ms ease;
 }
-.modal__play:hover {
-  transform: scale(1.1);
-  background-color: rgba(255, 255, 255, 0.35);
+.how-made-modal__play:hover {
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.2);
 }
-.modal__text {
+.how-made-modal__text {
+  margin: 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 176%;
+  font-size: 12px;
+  line-height: 170%;
   color: #131313;
-  letter-spacing: 0;
-  margin: 0;
+}
+@media (min-width: 768px) {
+  .how-made-modal__text {
+    font-size: 14px;
+  }
 }
 
 .no-scroll {
@@ -930,6 +932,7 @@ header .modal-buyNow__submit-btn:hover {
     height: 42px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    cursor: pointer;
   }
   header .buy__btn:hover {
     transform: scale(1.1);
@@ -945,6 +948,7 @@ header .modal-buyNow__submit-btn:hover {
     text-align: center;
     vertical-align: middle;
     color: #000000;
+    cursor: pointer;
   }
   header .buy__btn:hover svg {
     transform: rotate(1turn);
@@ -968,9 +972,6 @@ header .modal-buyNow__submit-btn:hover {
   }
   header .burger__menu-btn {
     display: none !important;
-  }
-  header {
-    /* На всякий случай принудительно скрываем мобильную навигацию на десктопах */
   }
   header .header__nav {
     display: none !important;
@@ -1013,6 +1014,7 @@ header .modal-buyNow__submit-btn:hover {
     height: 42px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    cursor: pointer;
   }
   header .buy__btn:hover {
     transform: scale(1.1);
@@ -1028,6 +1030,7 @@ header .modal-buyNow__submit-btn:hover {
     text-align: center;
     vertical-align: middle;
     color: #000000;
+    cursor: pointer;
   }
   header .buy__btn:hover svg {
     transform: rotate(1turn);
@@ -1093,6 +1096,7 @@ header .modal-buyNow__submit-btn:hover {
     height: 42px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    cursor: pointer;
   }
   header .buy__btn:hover {
     transform: scale(1.1);
@@ -1108,6 +1112,7 @@ header .modal-buyNow__submit-btn:hover {
     text-align: center;
     vertical-align: middle;
     color: #000000;
+    cursor: pointer;
   }
   header .buy__btn:hover svg {
     transform: rotate(1turn);
@@ -1892,6 +1897,7 @@ header .modal-buyNow__submit-btn:hover {
     letter-spacing: 0%;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
   }
   .header__hero .hero__buy > div > a {
     font-family: Montserrat;
@@ -2262,9 +2268,14 @@ header .modal-buyNow__submit-btn:hover {
   flex-direction: column;
   gap: 40px;
   margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
+  margin-top: -40px;
 }
 @media (min-width: 768px) {
   .cards__grid {
+    margin-top: -120px;
+    padding-top: 0;
     flex-direction: row;
     justify-content: center;
     gap: 32px;
@@ -2321,7 +2332,7 @@ header .modal-buyNow__submit-btn:hover {
   letter-spacing: 0.04em;
   margin-bottom: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
   position: relative;
   transition: color 0.2s ease-in-out;
 }
@@ -2330,7 +2341,7 @@ header .modal-buyNow__submit-btn:hover {
 }
 .location__card .schedule {
   padding-bottom: 24px;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
 }
 .location__card .schedule p {
   font-family: "Montserrat", sans-serif;
@@ -2347,7 +2358,7 @@ header .modal-buyNow__submit-btn:hover {
   margin-bottom: 0;
 }
 .location__card .card__contacts {
-  margin: 15px 0;
+  margin: 10px 5px;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -2389,57 +2400,16 @@ header .modal-buyNow__submit-btn:hover {
   justify-content: center;
 }
 .location__buttons .button__yellow {
-  background: #F8D24E;
+  background: #f8d24e;
   color: #131313;
 }
 .location__buttons .button__outline {
+  color: #131313;
   background: transparent;
-  border: 2px solid #F8D24E;
-  color: #131313;
-}
-
-@media (min-width: 768px) {
-  .cardsgrid {
-    flex-direction: row;
-    justify-content: center;
-    gap: 32px;
-  }
-  .locationbuttons {
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-  }
-}
-.location__buttons {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 20px;
-}
-.location__buttons button {
-  cursor: pointer;
-  padding: 10px 25px;
-  border-radius: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
-}
-.location__buttons .button__yellow {
-  background-color: #f8d24e;
-  color: #000;
-}
-.location__buttons .button__yellow:hover {
-  background-color: #f8d24e;
-}
-.location__buttons .button__outline {
-  background-color: transparent;
   border: 2px solid #f8d24e;
-  color: #f8d24e;
 }
 .location__buttons .button__outline:hover {
   background-color: #f8d24e;
-  color: #000;
 }
 
 .backdrop {
@@ -2452,9 +2422,12 @@ header .modal-buyNow__submit-btn:hover {
   z-index: 1000;
   display: flex;
   align-items: center;
-  padding: 20px;
   justify-content: center;
-  transition: opacity 250ms ease, visibility 250ms ease;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -2473,17 +2446,19 @@ body.no-scroll {
   position: relative;
   background-color: #fcfcfc;
   border-radius: 10px;
-  max-width: 280px;
-  padding: 20px;
+  padding: 28px 20px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
   border: 2px solid #f8d24e;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 280px;
+  max-height: 90vh;
+  overflow-y: auto;
   transform: scale(1);
-  transition: transform 250ms ease;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-sizing: border-box;
-  justify-content: flex-start;
 }
 .modal__close {
   position: absolute;
@@ -2492,17 +2467,32 @@ body.no-scroll {
   background: none;
   border: none;
   cursor: pointer;
+  font-size: 20px;
   line-height: 1;
+  color: #000000;
+  padding: 0;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__close:hover {
+  transform: rotate(180deg) scale(1.1);
 }
 .modal__title {
-  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.04em;
   margin-bottom: 20px;
   color: #131313;
+  text-transform: capitalize;
 }
 .modal__text {
-  font-size: 14px;
-  margin-bottom: 20px;
-  text-align: center;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+  text-align: left;
+  color: #131313;
 }
 .modal__form {
   display: flex;
@@ -2512,30 +2502,82 @@ body.no-scroll {
 }
 .modal__form input, .modal__form textarea {
   width: 100%;
-  padding: 12px;
+  padding: 11px 16px;
   border: 1px solid #84a178;
+  background: rgba(248, 210, 78, 0.1);
   border-radius: 10px;
   outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+.modal__form input::-moz-placeholder, .modal__form textarea::-moz-placeholder {
+  color: #131313;
+}
+.modal__form input::placeholder, .modal__form textarea::placeholder {
+  color: #131313;
 }
 .modal__form textarea {
-  height: 60px;
+  height: 64px;
   resize: none;
 }
 .modal .button__yellow {
-  margin-top: 20px;
-  padding: 12px 34px;
+  margin-top: 24px;
+  width: 121px;
+  height: 36px;
   background-color: #f8d24e;
-  border-radius: 22px;
+  border-radius: 30px;
   border: none;
   font-weight: 700;
+  font-size: 12px;
   cursor: pointer;
+  display: flex;
   align-self: center;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s ease;
 }
-.modal .modal__map img {
+.modal .button__yellow:hover {
+  background-color: rgb(246.0597826087, 197.527173913, 28.9402173913);
+}
+.modal__map {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.modal__map img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
+@media (min-width: 768px) {
+  .modal {
+    padding: 32px 54px;
+  }
+  .modal__title {
+    font-size: 20px;
+  }
+  .modal__text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .modal--locations {
+    max-width: 568px;
+  }
+  .modal--locations .modal__map {
+    margin-bottom: 8px;
+  }
+  .modal-franchise {
+    max-width: 568px;
+  }
+  .modal-franchise .modal__form {
+    gap: 16px;
+  }
+}
 .contacts__section {
   background-color: #84a178;
   padding: 60px 0;
@@ -2545,11 +2587,180 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 32px;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .contacts__section .contacts__flex {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
+    gap: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.container {
+  padding: 0 16px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 16px;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #fcfcfc;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .contacts__title {
+    font-size: 30px;
+    line-height: 37px;
+    max-width: 504px;
+  }
+}
+.contacts__title .contacts__accent {
+  display: block;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+  margin-top: 4px;
+}
+@media (min-width: 768px) {
+  .contacts__title .contacts__accent {
+    font-size: 58px;
+    line-height: 71px;
+    margin-top: 14px;
+  }
+}
+
+.contacts__channels {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .contacts__channels {
+    align-items: flex-end;
+    gap: 40px;
+  }
+}
+
+.social__box {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .social__box {
+    gap: 28px;
+  }
+}
+.social__box .social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background-color: #f8d24e;
+  border-radius: 50%;
+  font-size: 0;
+  color: #84a178;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+.social__box .social__item:hover {
+  transform: scale(1.1);
+  background-color: #fcfcfc;
+}
+.social__box .social__item svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.phone__display {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #131313;
+}
+@media (min-width: 768px) {
+  .phone__display {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: right;
+  }
+}
+.phone__display .phone__text {
+  display: block;
+}
+@media (min-width: 768px) {
+  .phone__display .phone__text {
+    display: inline;
+  }
+}
+.phone__display .phone__link {
+  display: block;
+  color: #fcfcfc;
+  text-decoration: none;
+  margin-top: 4px;
+  transition: color 0.25s ease;
+}
+.phone__display .phone__link:hover {
+  color: #f8d24e;
+}
+@media (min-width: 768px) {
+  .phone__display .phone__link {
+    display: inline;
+    margin-top: 0;
+    margin-left: 6px;
+  }
+}
+
+.contacts__line {
+  border: none;
+  border-top: 1px solid #fcfcfc;
+  margin: 24px 0 16px 0;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .contacts__line {
+    margin: 0 0 24px 0;
+  }
+}
+
+.contacts__copyright {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #7A7A7A;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .contacts__copyright {
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
   }
 }
 

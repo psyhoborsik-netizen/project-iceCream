@@ -716,6 +716,7 @@
             border: 2px #f8d24e solid;
             border-radius: 8px;
             @include font-btnHeader;
+            cursor: pointer;
         }
 
         .hero__buy > div > a {

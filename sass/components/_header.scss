@@ -399,6 +399,7 @@ header {
             height: 42px;
             border-radius: 10px;
             transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
         .buy__btn:hover {
@@ -410,6 +411,7 @@ header {
             border: none;
             @include font-btnHeader;
             color: #000000;
+            cursor: pointer;
         }
 
         .buy__btn:hover svg {
@@ -421,7 +423,6 @@ header {
             height: 12px;
             min-width: 12px;
             max-width: 12px;
-            
         }
 
         .burger__menu {
@@ -437,7 +438,6 @@ header {
             display: none !important;
         }
 
-        /* На всякий случай принудительно скрываем мобильную навигацию на десктопах */
         .header__nav {
             display: none !important;
         }
@@ -472,6 +472,7 @@ header {
             height: 42px;
             border-radius: 10px;
             transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
         .buy__btn:hover {
@@ -483,6 +484,7 @@ header {
             border: none;
             @include font-btnHeader;
             color: #000000;
+            cursor: pointer;
         }
 
         .buy__btn:hover svg {
@@ -543,6 +545,7 @@ header {
             height: 42px;
             border-radius: 10px;
             transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
         .buy__btn:hover {
@@ -554,6 +557,7 @@ header {
             border: none;
             @include font-btnHeader;
             color: #000000;
+            cursor: pointer;
         }
 
         .buy__btn:hover svg {
