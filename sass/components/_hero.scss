@@ -2,7 +2,7 @@
     height: 2136px;
     width: 100%;
     @include flex-center;
-    background-image: url(/src/images/BackIceCreamForMobile.png);
+    background-image: url(../src/images/BackIceCreamForMobile.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -135,7 +135,7 @@
         min-width: 200px;
         height: 200px;
         border-radius: 50%;
-        background-image: url(/src/images/IceCream.webp);
+        background-image: url(../src/images/IceCream.webp);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -148,7 +148,7 @@
         min-width: 200px;
         height: 200px;
         border-radius: 50%;
-        background-image: url(/src/images/IceCoffee.webp);
+        background-image: url(../src/images/IceCoffee.webp);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -160,7 +160,7 @@
         min-width: 200px;
         height: 200px;
         border-radius: 50%;
-        background-image: url(/src/images/Milkshakes.webp);
+        background-image: url(../src/images/Milkshakes.webp);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
